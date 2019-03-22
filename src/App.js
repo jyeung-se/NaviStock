@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import MainPage from './containers/mainPage'
 
 class App extends Component {
   render() {
@@ -8,6 +8,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1>Welcome to NaviStock!</h1>
+          <MainPage/>
         </header>
       </div>
     );

@@ -1,0 +1,8 @@
+
+
+const Stock = props => {
+
+  return (
+
+  )
+}
