@@ -4,7 +4,7 @@ import Stock from './stockList'
 const StockList = props => {
   console.log('StockList props: ', props)
 
-  const mappedStocks = props.stocks.map((stock, index) => <Stock stock={stock} key={index} handleClick={props.handleClick} />)
+  // const mappedStocks = props.stocks.map((stock, index) => <Stock stock={stock} key={index} handleClick={props.handleClick} />)
 
   return (
     <div>
@@ -19,7 +19,7 @@ const StockList = props => {
       <h3 onClick={props.handleClick}>Stock 9</h3>
       <h3 onClick={props.handleClick}>Stock 10</h3>
 
-      {mappedStocks}
+      {/* {mappedStocks} */}
     </div>
   )
 }
