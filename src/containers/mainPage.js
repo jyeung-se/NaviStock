@@ -16,8 +16,7 @@ class MainPage extends Component {
     }
   }
 
-  // NOTE: change the stock symbol in fetch url to obtain the searched or selected stock by user.
-
+  // NOTE: ToDo: Change componentDidMount to fetch the top 10 most impacted stocks of the *insert chosen time/date interval*
   componentDidMount() {
     // fetch(`https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=5min&apikey=${AVkey}`)
     // .then(res => res.json())
@@ -26,18 +25,20 @@ class MainPage extends Component {
     // }))
   }
 
+  // NOTE: ToDo: change the stock symbol in fetch url to obtain the searched or selected stock by user.
   handleClick = () => {
     console.log('Clicked on Stock.')
     alert('Placeholder for stock onClick.')
     fetch(`https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=5min&apikey=${AVkey}`)
     .then(res => res.json())
-    .then(stocksData => this.setState({
-      stocks: stocksData
+    .then(clickedStockData => this.setState({
+      myStocks: [...this.state.myStocks, clickedStockData]
     }))
   }
 
   render(){
     console.log('this.state.stocks is: ', this.state.stocks)
+    console.log('this.state.myStocks is: ', this.state.myStocks)
 
     return (
       <div>
